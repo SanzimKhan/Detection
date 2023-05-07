@@ -3,9 +3,7 @@ import cv2
 import numpy as np
 
 img = cv2.imread(r'H:/NOW IN/licensed-image.jpg', cv2.IMREAD_GRAYSCALE)
- 
 img_blur = cv2.medianBlur(img, 5)
-
 circles = cv2.HoughCircles(img_blur, cv2.HOUGH_GRADIENT, dp=1, minDist=50,
                            param1=200, param2=20, minRadius=0, maxRadius=0)
 
